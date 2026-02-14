@@ -13,11 +13,15 @@
 
 ### Feature: {feature-name}
 
+**Architecture:**
+- [ ] architecture.md created with design decisions
+
 **UI Specs:**
 - [ ] specs/ui/INDEX.md created
-- [ ] Page specs written for each view
-- [ ] Navigation flows documented
-- [ ] Loading and error states documented
+- [ ] Page specs written in specs/ui/pages/ for each view
+- [ ] specs/ui/flows.md documents navigation between pages (if >1 page)
+- [ ] specs/ui/state.md documents global state structure (if applicable)
+- [ ] Loading and error states documented in each page's State Matrix
 
 **API / Data Specs:**
 - [ ] specs/api.md has all endpoints with request/response shapes
@@ -45,6 +49,7 @@
 - [ ] Tests written and failing (RED)
 - [ ] Implementation passes all tests (GREEN)
 - [ ] Code refactored, tests still green
+- [ ] E2E happy path test passes
 - [ ] PR created (< 2000 lines)
 - [ ] PR merged
 - [ ] Phase plan updated with PR links

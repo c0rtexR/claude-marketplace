@@ -33,9 +33,9 @@ services: []
 
 ## Features
 
-| Feature | Service | Description |
-|---------|---------|-------------|
-| {name} | {service} | {what it does} |
+| Feature | Service | Depends on | Description |
+|---------|---------|-----------|-------------|
+| {name} | {service} | — | {what it does} |
 
 ## Success Criteria
 
