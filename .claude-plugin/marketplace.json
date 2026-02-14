@@ -1,0 +1,24 @@
+{
+  "name": "iplooox-marketplace",
+  "owner": {
+    "name": "Iplooox"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by Iplooox",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "sdd",
+      "source": "./plugins/sdd",
+      "description": "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Covers epic lifecycle, spec-driven planning, test-driven implementation, bug investigation, and Agent Teams coordination.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Iplooox"
+      },
+      "license": "MIT",
+      "keywords": ["methodology", "tdd", "spec-driven", "agent-teams", "epic-management"],
+      "category": "workflow"
+    }
+  ]
+}

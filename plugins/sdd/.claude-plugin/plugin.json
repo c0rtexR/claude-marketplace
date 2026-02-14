@@ -1,0 +1,10 @@
+{
+  "name": "sdd",
+  "description": "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Covers epic lifecycle, spec-driven planning (UI → API → DB → Tests), test-driven implementation, bug investigation, and Agent Teams coordination.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Iplooox"
+  },
+  "repository": "https://github.com/iploooox/claude-marketplace",
+  "license": "MIT"
+}
