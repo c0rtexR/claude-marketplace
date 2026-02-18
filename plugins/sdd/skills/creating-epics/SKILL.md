@@ -78,7 +78,11 @@ project-root/
 ├── bugs/                           # Standalone bugs (no epic context)
 └── docs/
     ├── coding-standards.md         # Rules derived from real bugs (see template)
-    └── agent-protocol.md           # Agent verification contract (see template)
+    ├── agent-protocol.md           # Agent verification contract (see template)
+    └── learnings/                  # Self-improvement system (see sdd:reflecting)
+        ├── INDEX.md                # Dashboard: patterns, unreviewed, metrics
+        ├── entries/                # Individual learning entries
+        └── reviews/               # Retrospective review summaries
 ```
 
 **Key rule:** `epics/` is the working area. `services/` is source of truth — only update after code merges.
@@ -123,8 +127,10 @@ Each deliverable gets a folder under `features/`. Create the feature folders wit
 3. Create feature documentation in `services/{service}/features/` using `references/feature-readme-template.md`
 4. Create/update `services/{service}/PROJECT.md` using `references/project-template.md`
 5. Sync ADRs from epic `decisions/` to service decisions folder
-6. Update EPIC.md status → `complete`
-7. Update `epics/INDEX.md`
+6. Run retrospective — invoke `sdd:reflecting` in review mode
+7. Verify all learning entries reviewed and actions applied
+8. Update EPIC.md status → `complete`
+9. Update `epics/INDEX.md`
 
 ## Checklist Skip Protocol
 
@@ -163,3 +169,4 @@ Use `references/adr-template.md`. Record in `decisions/INDEX.md`. Inform user: "
 **Pairs with:**
 - **sdd:investigating-bugs** — For bugs found during or after implementation
 - **sdd:coordinating-agent-teams** — For complex epics requiring multi-agent teams
+- **sdd:reflecting** — REQUIRED during epic closure (Step 6). Run retrospective before marking complete.

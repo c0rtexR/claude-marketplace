@@ -4,7 +4,7 @@ description: "Skills-Driven Development — a complete spec-first, TDD methodolo
 ---
 
 <EXTREMELY-IMPORTANT>
-SDD is a methodology with 5 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
+SDD is a methodology with 6 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
 
 This is not optional. Each skill contains checklists, templates, and process gates that prevent real bugs.
 </EXTREMELY-IMPORTANT>
@@ -44,6 +44,11 @@ New project / "let's build X"
          │ sdd:coordinating│ ◄── Overlay: use when ANY phase
          │ -agent-teams    │     needs multi-agent coordination
          └─────────────────┘
+
+         ┌─────────────────┐
+         │ sdd:reflecting   │ ◄── Capture learnings, run retrospectives,
+         │                  │     turn patterns into process improvements
+         └─────────────────┘
 ```
 
 ## Route to the Right Skill
@@ -60,6 +65,8 @@ Match the user's intent and **invoke the skill immediately:**
 | "What's next", "resume work" | **sdd:creating-epics** | Check epic status |
 | "Close epic", "wrap up" | **sdd:creating-epics** | Closure process |
 | "Use team", "spawn agents", "coordinate" | **sdd:coordinating-agent-teams** | Team playbooks |
+| "Retrospective", "review learnings", "reflect" | **sdd:reflecting** | Self-improvement |
+| "Log a learning", "I noticed a pattern" | **sdd:reflecting** | Capture learning |
 | "Write tests" (no specs exist) | **sdd:writing-specs** | Test plan comes from specs |
 | "Write tests" (specs exist) | **sdd:implementing-with-tdd** | TDD cycle |
 
@@ -73,6 +80,7 @@ Skill: sdd:writing-specs
 Skill: sdd:implementing-with-tdd
 Skill: sdd:investigating-bugs
 Skill: sdd:coordinating-agent-teams
+Skill: sdd:reflecting
 ```
 
 **Announce it:** "Using sdd:{skill-name} to {what you're doing}."
@@ -91,6 +99,7 @@ Skills auto-chain at transition points. Each skill tells you which skill to invo
 - `implementing-with-tdd` → bug found → **MUST invoke** `sdd:investigating-bugs`
 - `investigating-bugs` → Step 5 regression test → follows `sdd:implementing-with-tdd` RED→GREEN cycle
 - `coordinating-agent-teams` → tell subagents to use the relevant skill for their role
+- `reflecting` → captures learnings from any skill; retrospective improves all skills' rules
 
 **You don't need to remember this.** Each skill's Integration section has the directives.
 
