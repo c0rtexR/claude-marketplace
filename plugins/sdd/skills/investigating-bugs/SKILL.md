@@ -163,6 +163,16 @@ If this bug represents a new class of mistake:
 4. Add to `docs/coding-standards.md`
 5. Reference the bug ID and rule in SOLUTION.md under "Coding Standard Impact"
 
+### Log a Learning Entry (If Broader Pattern)
+
+If this bug reveals a pattern beyond a single code rule — e.g., the same class of API mismatch keeps recurring, or environment issues keep causing debugging time — also create a learning entry:
+
+1. Invoke `sdd:reflecting` in capture mode
+2. Category is usually `bug-pattern`, but could be `environment`, `architecture`, etc.
+3. Cross-reference with existing learnings — is this the 3rd occurrence?
+
+Not every bug needs a learning entry. But if you think "we keep hitting this kind of thing", log it.
+
 ## Common Bug Types
 
 | Type | Symptoms | Investigation Strategy |
@@ -205,3 +215,4 @@ If this bug represents a new class of mistake:
 **Pairs with:**
 - **sdd:creating-epics** — For epic-level bug tracking
 - **sdd:coordinating-agent-teams** — For team-based bug investigation playbook (Triage → Investigate → Fix → Verify)
+- **sdd:reflecting** — Step 7 prompts for learning entry when a bug reveals a broader pattern

@@ -359,6 +359,7 @@ The PO must actively challenge agent claims. The PO is not a rubber stamp.
 | **Orchestrator writing code** | **Orchestrator coordinates only. Spawn agents to write code.** |
 | **Weak model for dev agents** | **Use strongest model. Weak models skip E2E, use `any`, modify tests.** |
 | **Trusting claims without evidence** | **Demand actual terminal output. "Tests pass" without proof = not done.** |
+| **Not logging agent failures** | **When an agent fails (false blocked, skipped E2E, modified tests), log a learning entry via `sdd:reflecting`. These accumulate and reveal systemic patterns in retrospectives.** |
 
 ## Integration
 
@@ -376,3 +377,4 @@ The PO must actively challenge agent claims. The PO is not a rubber stamp.
 
 **Pairs with:**
 - **sdd:creating-epics** — For epic-level team structure and tracking
+- **sdd:reflecting** — Log agent failures and coordination issues as learning entries. These get reviewed in retrospectives to improve the coordination process.
