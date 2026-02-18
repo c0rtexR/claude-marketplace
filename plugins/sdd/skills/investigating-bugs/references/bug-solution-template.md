@@ -53,3 +53,10 @@ date_resolved: —
 - **What caused it**: {root cause summary}
 - **How to prevent**: {process/code improvement}
 - **What to monitor**: {metric or alert to add}
+
+## Coding Standard Impact
+
+- **Category**: {Selector Safety / API Contracts / Data Integrity / Async Patterns / Type Safety / State Management / Test Reliability / Environment}
+- **Existing rule violated**: {CS-NNN if applicable, or "None — new class of bug"}
+- **New rule created**: {CS-NNN: {short name} — added to `docs/coding-standards.md`, or "N/A"}
+- **Rule file**: `docs/coding-standards.md`

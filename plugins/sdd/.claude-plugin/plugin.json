@@ -1,7 +1,7 @@
 {
   "name": "sdd",
-  "description": "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Covers epic lifecycle, spec-driven planning (UI → API → DB → Tests), test-driven implementation, bug investigation, and Agent Teams coordination.",
-  "version": "1.0.0",
+  "description": "Skills-Driven Development — a spec-first, TDD methodology with 5 practical skills: creating-epics, writing-specs, implementing-with-tdd, investigating-bugs, and coordinating-agent-teams. Pick the skill that matches what you're doing.",
+  "version": "2.2.0",
   "author": {
     "name": "Iplooox"
   },

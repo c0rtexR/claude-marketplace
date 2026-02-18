@@ -41,3 +41,5 @@
 - [ ] Feature docs updated (if behavior changed)
 - [ ] INVESTIGATION.md status → resolved
 - [ ] Epic bugs table updated (if epic-scoped)
+- [ ] Coding standard checked — does existing rule cover this bug?
+- [ ] Bug mapped to coding standard category (new rule created if needed)
