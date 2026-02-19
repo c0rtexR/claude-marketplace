@@ -49,6 +49,10 @@ Use ASCII diagrams:
 
 ## Step 2: Write UI Specs
 
+**If a UDR exists** (from `sdd:ui-designing`): The chosen visualization and visual semantics from the UDR become the wireframe and component basis for the page spec. Reference the UDR ID.
+
+**If a CRR exists** (from `sdd:component-research`): Component decisions (reuse/extend/build, library choices) inform the Components table. Reference the CRR ID.
+
 Create per-page specs in `specs/ui/pages/` from `references/ui-page-template.md`:
 
 Each page spec includes:
@@ -210,6 +214,8 @@ Once implementation starts, specs become reference docs. To change a spec:
 - **sdd:creating-epics** (Step 4) — After features identified
 - **sdd:implementing-with-tdd** (TDD Checkpoint) — When specs/tests.md doesn't exist
 - **sdd:workflow** — When user says "plan this", "write specs", "design feature"
+- **sdd:ui-designing** — Visualization decided, feeds into UI specs
+- **sdd:component-research** — Component decisions feed into UI specs and architecture
 
 **Subagents should use:**
 - **sdd:coordinating-agent-teams** — For parallelizing spec writing across agents

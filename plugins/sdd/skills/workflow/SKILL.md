@@ -1,10 +1,10 @@
 ---
 name: workflow
-description: "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Use this skill whenever the user wants to create an epic, plan features, implement with TDD, investigate bugs, coordinate agent teams, run spikes, or explore design options. Also triggers on: 'new project', 'start feature', 'plan epic', 'implement phase', 'investigate bug', 'what's next', 'create PR', 'close epic', 'spike', 'explore', 'design options'."
+description: "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Use this skill whenever the user wants to create an epic, plan features, implement with TDD, investigate bugs, coordinate agent teams, run spikes, explore design options, design UI visualizations, or research components. Also triggers on: 'new project', 'start feature', 'plan epic', 'implement phase', 'investigate bug', 'what's next', 'create PR', 'close epic', 'spike', 'explore', 'design options', 'visualize', 'UI options', 'component audit', 'build or reuse'."
 ---
 
 <EXTREMELY-IMPORTANT>
-SDD is a methodology with 8 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
+SDD is a methodology with 10 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
 
 This is not optional. Each skill contains checklists, templates, and process gates that prevent real bugs.
 </EXTREMELY-IMPORTANT>
@@ -33,6 +33,18 @@ New project / "let's build X"
 │ sdd:designing    │ ◄── Explore options, trade-offs, diagrams
 │                  │     → ADR formalizing the decision
 └────────┬────────┘
+         │ UI involved?
+         ▼
+┌─────────────────┐
+│ sdd:ui-designing │ ◄── Visualization families → variations →
+│                  │     wireframes → visual semantics → UDR
+└────────┬────────┘
+         │ Custom components needed?
+         ▼
+┌──────────────────┐
+│ sdd:component-   │ ◄── Landscape scan → gap analysis →
+│ research         │     build/reuse/extend → innovation check
+└────────┬─────────┘
          │ Features identified
          ▼
 ┌─────────────────┐
@@ -78,6 +90,8 @@ Match the user's intent and **invoke the skill immediately:**
 | "Close epic", "wrap up" | **sdd:creating-epics** | Closure process |
 | "Can we do X?", "is this feasible?", "spike", "POC" | **sdd:spiking** | Technical feasibility |
 | "How should we build X?", "design options", "explore" | **sdd:designing** | Design exploration |
+| "How should we show this?", "visualize", "UI options", "wireframe options" | **sdd:ui-designing** | Visualization R&D |
+| "What components exist?", "component audit", "build or reuse?", "what library?" | **sdd:component-research** | Component landscape |
 | "Use team", "spawn agents", "coordinate" | **sdd:coordinating-agent-teams** | Team playbooks |
 | "Retrospective", "review learnings", "reflect" | **sdd:reflecting** | Self-improvement |
 | "Log a learning", "I noticed a pattern" | **sdd:reflecting** | Capture learning |
@@ -97,6 +111,8 @@ Skill: sdd:coordinating-agent-teams
 Skill: sdd:reflecting
 Skill: sdd:spiking
 Skill: sdd:designing
+Skill: sdd:ui-designing
+Skill: sdd:component-research
 ```
 
 **Announce it:** "Using sdd:{skill-name} to {what you're doing}."
@@ -118,7 +134,12 @@ Skills auto-chain at transition points. Each skill tells you which skill to invo
 - `reflecting` → captures learnings from any skill; retrospective improves all skills' rules
 - `spiking` → spike reveals design question → **can invoke** `sdd:designing`
 - `designing` → option needs technical validation → **can invoke** `sdd:spiking`
-- `designing` → decision made → feeds into `sdd:writing-specs`
+- `designing` → decision made, UI involved → **can invoke** `sdd:ui-designing`
+- `designing` → decision made, no UI → feeds into `sdd:writing-specs`
+- `ui-designing` → custom components needed → **can invoke** `sdd:component-research`
+- `ui-designing` → no custom components → feeds into `sdd:writing-specs`
+- `component-research` → all decisions made → feeds into `sdd:writing-specs`
+- `component-research` → needs feasibility check → **can invoke** `sdd:spiking`
 
 **You don't need to remember this.** Each skill's Integration section has the directives.
 
