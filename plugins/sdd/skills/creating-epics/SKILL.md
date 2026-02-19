@@ -39,7 +39,14 @@ epics/
     ├── REQUIREMENTS.md             # Hard requirements
     ├── decisions/
     │   ├── INDEX.md                # Decision log
-    │   └── ADR-001-{slug}.md       # Architecture Decision Records
+    │   ├── ADR-001-{slug}.md       # Architecture Decision Records
+    │   └── explorations/           # Design explorations (see sdd:designing)
+    │       └── EXP-001-{slug}.md
+    ├── spikes/
+    │   ├── INDEX.md                # Spike log (see sdd:spiking)
+    │   └── SPIKE-001-{slug}/
+    │       ├── SPIKE.md
+    │       └── poc/
     ├── stories/
     │   └── {STORY-ID}.md
     ├── bugs/
@@ -170,3 +177,5 @@ Use `references/adr-template.md`. Record in `decisions/INDEX.md`. Inform user: "
 - **sdd:investigating-bugs** — For bugs found during or after implementation
 - **sdd:coordinating-agent-teams** — For complex epics requiring multi-agent teams
 - **sdd:reflecting** — REQUIRED during epic closure (Step 6). Run retrospective before marking complete.
+- **sdd:spiking** — For technical feasibility spikes before writing specs
+- **sdd:designing** — For design exploration when approach is unclear
