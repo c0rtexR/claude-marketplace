@@ -1,10 +1,10 @@
 ---
 name: workflow
-description: "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Use this skill whenever the user wants to create an epic, plan features, implement with TDD, investigate bugs, coordinate agent teams, run spikes, explore design options, design UI visualizations, or research components. Also triggers on: 'new project', 'start feature', 'plan epic', 'implement phase', 'investigate bug', 'what's next', 'create PR', 'close epic', 'spike', 'explore', 'design options', 'visualize', 'UI options', 'component audit', 'build or reuse'."
+description: "Skills-Driven Development — a complete spec-first, TDD methodology for AI agent teams. Use this skill whenever the user wants to brainstorm ideas, create an epic, plan features, write implementation plans, implement with TDD, investigate bugs, coordinate agent teams, run spikes, explore design options, design UI visualizations, or research components. Also triggers on: 'new project', 'start feature', 'plan epic', 'implement phase', 'investigate bug', 'what's next', 'create PR', 'close epic', 'spike', 'explore', 'design options', 'visualize', 'UI options', 'component audit', 'build or reuse', 'brainstorm', 'explore idea', 'write plan', 'implementation plan'."
 ---
 
 <EXTREMELY-IMPORTANT>
-SDD is a methodology with 10 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
+SDD is a methodology with 12 specialized skills. You MUST invoke the correct sub-skill for the task at hand. Do NOT try to wing it from memory — invoke the skill so you get the current version.
 
 This is not optional. Each skill contains checklists, templates, and process gates that prevent real bugs.
 </EXTREMELY-IMPORTANT>
@@ -14,9 +14,21 @@ This is not optional. Each skill contains checklists, templates, and process gat
 ## The Workflow
 
 ```
-New project / "let's build X"
+New idea / "let's think about X"
     │
     ▼
+┌─────────────────┐
+│ sdd:brainstorming│ ◄── Explore ideas, clarify requirements,
+│                  │     design before implementation
+└────────┬────────┘
+         │ Idea validated, design approved
+         ▼
+┌─────────────────┐
+│ sdd:writing-     │ ◄── Bite-sized implementation plan
+│ plans            │     with exact files, code, commands
+└────────┬────────┘
+         │ Plan ready, or skip to epic for larger projects
+         ▼
 ┌─────────────────┐
 │ sdd:creating-    │ ◄── Create epic structure, interview user,
 │ epics            │     set up folder hierarchy, CLAUDE.md
@@ -81,6 +93,8 @@ Match the user's intent and **invoke the skill immediately:**
 
 | User Says | Invoke | Why |
 |-----------|--------|-----|
+| "Brainstorm", "explore idea", "let's think about", "what should we build" | **sdd:brainstorming** | Design before code |
+| "Write plan", "implementation plan", "break this down", "task breakdown" | **sdd:writing-plans** | Bite-sized tasks |
 | "New project", "let's build X", "create epic" | **sdd:creating-epics** | Start with structure |
 | "Plan this", "write specs", "design feature" | **sdd:writing-specs** | Specs before code |
 | "Implement phase N", "start coding", "build this" | **sdd:implementing-with-tdd** | TDD discipline |
@@ -103,6 +117,8 @@ Match the user's intent and **invoke the skill immediately:**
 Use the `Skill` tool:
 
 ```
+Skill: sdd:brainstorming
+Skill: sdd:writing-plans
 Skill: sdd:creating-epics
 Skill: sdd:writing-specs
 Skill: sdd:implementing-with-tdd
@@ -125,6 +141,8 @@ All SDD skills are **rigid** — follow them exactly. Don't adapt away the disci
 
 Skills auto-chain at transition points. Each skill tells you which skill to invoke next:
 
+- `brainstorming` → after design approval → **MUST invoke** `sdd:writing-plans`
+- `writing-plans` → after plan saved → **MUST invoke** `sdd:implementing-with-tdd` or `sdd:coordinating-agent-teams`
 - `creating-epics` → after Step 4 → **MUST invoke** `sdd:writing-specs`
 - `writing-specs` → after Step 8 → **MUST invoke** `sdd:implementing-with-tdd`
 - `implementing-with-tdd` → TDD Checkpoint fails → **MUST invoke** `sdd:writing-specs`

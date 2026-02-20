@@ -1,7 +1,7 @@
 {
   "name": "sdd",
-  "description": "Skills-Driven Development — a spec-first, TDD methodology with 10 practical skills: creating-epics, writing-specs, implementing-with-tdd, investigating-bugs, coordinating-agent-teams, reflecting, spiking, designing, ui-designing, and component-research. Pick the skill that matches what you're doing.",
-  "version": "2.5.0",
+  "description": "Skills-Driven Development — a spec-first, TDD methodology with 12 practical skills: brainstorming, writing-plans, creating-epics, writing-specs, implementing-with-tdd, investigating-bugs, coordinating-agent-teams, reflecting, spiking, designing, ui-designing, and component-research. Pick the skill that matches what you're doing.",
+  "version": "2.6.0",
   "author": {
     "name": "Iplooox"
   },
