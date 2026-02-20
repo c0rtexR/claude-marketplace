@@ -18,6 +18,18 @@ Read the specs. Write tests that fail. Write code to pass them. Verify. Ship.
 - Creating a PR after implementation
 - Marking a phase as complete
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Load context (read phase plan, architecture, specs, PROJECT.md)
+2. TDD checkpoint (verify specs/tests.md exists)
+3. RED-GREEN-REFACTOR cycle (one task per test case from specs/tests.md)
+4. Write E2E test (happy-path end-to-end)
+5. Run zero-tolerance gates (tsc, eslint, all tests)
+6. Create PR
+7. Complete phase (update tracking in phase, epic, stories, checklist)
+
 ## Before You Write Any Code
 
 Read these files in order:

@@ -15,6 +15,16 @@ Assume they are a skilled developer, but know almost nothing about the toolset o
 
 **Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md`
 
+## Step 1: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Read design/spec/requirements input
+2. Identify all tasks to implement
+3. Write each task with files, steps, code, commands
+4. Write plan header and save document
+5. Offer execution choice (direct or agent team)
+
 ## Bite-Sized Task Granularity
 
 **Each step is one action (2-5 minutes):**

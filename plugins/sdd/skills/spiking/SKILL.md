@@ -19,6 +19,27 @@ Answer "can we do X?" with evidence before committing to specs.
 - Before writing specs (phased) — technical unknowns need resolution first
 - Mid-implementation (standalone) — hit a technical wall, need to validate an approach
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+**Build mode:**
+1. Frame the question (one specific technical question)
+2. Define success criteria (go/no-go evidence)
+3. Set time budget (optional)
+4. Build POC (minimal throwaway code)
+5. Gather evidence (benchmarks, test output, profiles)
+6. Write verdict (go, no-go, or needs more investigation)
+
+**Investigate mode:**
+1. Frame the question
+2. Define success criteria
+3. Map the landscape (files, modules, scope)
+4. Trace code paths (dependencies, coupling, entry/exit points)
+5. Measure (performance, compatibility, blast radius)
+6. Assess impact
+7. Write verdict
+
 ## Two Modes
 
 | Mode | When | Evidence Source |

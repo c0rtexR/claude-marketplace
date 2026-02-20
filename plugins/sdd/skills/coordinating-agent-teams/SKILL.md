@@ -11,6 +11,17 @@ Agents coordinate through the folder structure and document lifecycle. The orche
 
 **Core principle:** The folder structure IS the coordination mechanism. Any agent can read and write any file — coordination comes from task dependencies and document lifecycle rules.
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Select playbook (planning, implementation, or bug investigation)
+2. Set up agent environments (worktrees, databases, ports per agent)
+3. Spawn agents per playbook phase with context files
+4. Monitor agents and review evidence (actual terminal output)
+5. Merge agent branches one at a time, test after each
+6. Run full test suite after all merges
+
 ## When to Use Teams
 
 **Use teams for:**

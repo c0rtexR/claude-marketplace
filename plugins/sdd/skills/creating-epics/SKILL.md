@@ -18,6 +18,23 @@ Epics are the working area for all design, planning, and implementation. Create 
 - Resuming work ("what's next")
 - Wrapping up completed work ("close epic")
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+**Creating a new epic:**
+1. Interview the user
+2. Create folder structure
+3. Fill in core documents (CLAUDE.md, EPIC.md, REQUIREMENTS.md, CHECKLIST.md, stories)
+4. Identify features and invoke writing-specs
+
+**Closing an epic:**
+1. Verify all phases and checklist complete
+2. Create feature documentation in services/
+3. Sync ADRs to service decisions
+4. Run retrospective (invoke reflecting)
+5. Update EPIC.md and INDEX.md
+
 ## Creating a New Epic
 
 ### Step 1: Interview the User

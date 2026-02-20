@@ -19,6 +19,17 @@ Explore design options when the right approach isn't obvious. Produces visual re
 - During spec writing (phased) — the design approach is unclear
 - Standalone — facing an architectural fork at any point
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Frame the design question (one specific question + constraints)
+2. Map the design space (moving parts, fixed constraints, interfaces)
+3. Sketch 2-3 options (ASCII diagrams + pros/cons each)
+4. Trade-off matrix (relevant dimensions only)
+5. Recommend + discuss with user
+6. Formalize as ADR
+
 ## Steps
 
 ### Step 1: Frame the Design Question
