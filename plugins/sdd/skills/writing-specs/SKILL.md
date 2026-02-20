@@ -18,6 +18,20 @@ Document the UI first, design the API to serve it, design the database to store 
 - Designing a new feature within an existing epic
 - Need to update specs during implementation (create ADR first)
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Document architecture (current → target state)
+2. Write UI specs (per page)
+3. Write API specs (endpoints, contracts)
+4. Run contract validation (forward + reverse checks)
+5. Write database specs (tables, relationships, migrations)
+6. Write test plan (unit, integration, E2E)
+7. Additional specs if needed (transformations)
+8. Define phases (vertical slices with task breakdowns)
+9. Pre-implementation validation checklist
+
 ## The Spec Order
 
 ```

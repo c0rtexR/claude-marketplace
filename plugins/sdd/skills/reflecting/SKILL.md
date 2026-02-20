@@ -19,6 +19,23 @@ Capture learnings as they happen. Detect patterns over time. Turn patterns into 
 - 5+ unreviewed entries accumulate in `docs/learnings/INDEX.md`
 - Phase completion (SUGGESTED — quick scan)
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+**Capture mode:**
+1. Determine category
+2. Determine severity
+3. Create entry file
+4. Cross-reference with existing entries
+
+**Review mode:**
+1. Gather (read INDEX, unreviewed entries, current rules)
+2. Detect patterns (group by category, find shared root causes)
+3. Propose actions (one per pattern)
+4. Write review document
+5. Present to user and execute approved actions
+
 ## Two Modes
 
 | Mode | Trigger | What Happens |
