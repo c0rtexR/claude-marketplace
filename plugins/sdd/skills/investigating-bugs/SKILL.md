@@ -18,6 +18,18 @@ Investigate first. Fix second. Prove it with a test.
 - User says "fix this bug", "there's an issue", "this is broken"
 - Something works in one environment but fails in another
 
+## Step 0: Create Task List
+
+**Before doing anything else**, create a task for each step so nothing gets lost:
+
+1. Determine context (epic-scoped or standalone, create bug folder)
+2. Investigate (symptoms, reproduce, map architecture, evidence, hypotheses)
+3. Document root cause
+4. Propose solutions (options with pros/cons, get user approval)
+5. Fix with regression test (RED → GREEN)
+6. Create PR and update tracking
+7. Feed back to coding standards (new CS rule or note existing)
+
 ## Step 1: Determine Context
 
 Is this bug part of an active epic or standalone?
