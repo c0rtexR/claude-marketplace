@@ -170,6 +170,13 @@ When setting up for the first time, create the `explorations/` subfolder under e
 
 **Can trigger:**
 - **sdd:spiking** — Design option needs technical validation before you can evaluate it
+- **sdd:ui-designing** — Architecture decision made, feature involves UI, visualization approach unclear
+
+**UI gate:**
+- After architecture decision, check context: does this feature involve a UI?
+- If YES → suggest `sdd:ui-designing` for visualization exploration
+- If NO → suggest `sdd:writing-specs` directly
+- If UNCLEAR → ask the user: "Does this feature involve a user interface?"
 
 **Triggered from:**
 - **sdd:spiking** — Spike reveals a design question ("it works, but which approach?")
